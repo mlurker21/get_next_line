@@ -6,7 +6,7 @@
 /*   By: mlurker <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 00:03:30 by pcollio-          #+#    #+#             */
-/*   Updated: 2018/12/30 19:29:45 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/13 00:14:18 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,29 @@ static char		*findn(char *buffn)
 	return (buff);
 }
 
-static t_gnl		*get_first_line(const int fd, char **line)
+static t_gnl		*get_first_line(const int fd, char **line, t_gnl *list)
 {
 	t_gnl			*new;
 	char			buffn[BUFF_SIZE + 1];
 	ssize_t			rd;
 
-	*line = ft_strnew(BUFF_SIZE);
+	*line = ft_strnew(BUFF_SIZE); //del
 	new = (t_gnl*)malloc(BUFF_SIZE);
+	if (list->buff)
+	{
+		*line = findn(list->buff);
+		if (ft_strcmp(*line, list->buff) != 0)
+		{
+			list->buff = ft_strchr(list->buff, '\n') + 1;
+			return (list);
+		}
+	}
 	while ((rd = read(fd, buffn, BUFF_SIZE)))
 	{
 		new->buff = ft_strdup(findn(buffn));
 		*line = ft_strjoin(*line, new->buff);
 		if (ft_strcmp(new->buff, buffn) != 0)
 		{
-			printf("%s", &**line);
 			new->buff = ft_strchr(buffn, '\n') + 1;
 			new->fd = fd;
 			return (new);
@@ -55,16 +63,17 @@ int			get_next_line(const int fd, char **line)
 {
 	static t_gnl	*list;
 
-	list = (t_gnl*)malloc(sizeof(list));
-	if (list->fd == 0)
-		list = get_first_line(fd, line);
+	if (!(list))
+		list = (t_gnl*)ft_lstnew(NULL, BUFF_SIZE);
+	if (list->fd == fd || list->fd == 0)
+	{
+		list = get_first_line(fd, line, list);
+		return (1);
+	}
 	while (list->fd != fd)
 		list = list->next;
-	if (list->next == NULL)
-		list->next = get_first_line(fd, line);
-	if (list->fd == fd)
-		list = get_first_line(list->fd, &list->buff);
-	
+	if (!(list->next))
+		list->next = get_first_line(fd, line, list);
 	return (0);
 }
 
@@ -72,10 +81,13 @@ int			main()
 {
 	int		file;
 	char	*line = "12345";
-	int i = 2;
-
 	file = open("/Users/pcollio-/Projects/gnl/test", O_RDONLY);
-	//while(i--)
-		get_next_line(file, &line);
+	get_next_line(file, &line);
+	//printf("%s \n", &*line);
+	get_next_line(file, &line);
+	//printf("%s \n", &*line);
+	// file = open("/Users/pcollio-/Projects/gnl/test2", O_RDONLY);
+	// get_next_line(file, &line);
+	// printf("%s \n", &*line);
 	return (0);
 }

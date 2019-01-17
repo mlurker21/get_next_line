@@ -6,7 +6,7 @@
 /*   By: mlurker <mlurker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 00:03:30 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/17 16:48:28 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/17 16:51:02 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,29 +88,18 @@ int			main()
 	int i = 12;
 	file = open("/Users/pcollio-/Projects/gnl/test", O_RDONLY);
 	printf("-> 1 file: \n");
-	while(i != 0)
+	while(i-- != 0)
 	{
 		get_next_line(file, &line);
 		printf("%s \n", &*line);
-		i--;
 	}
 	i = 5;
 	file = open("/Users/pcollio-/Projects/gnl/test2", O_RDONLY);
 	printf("-> 2 file: \n");
-	while(i != 0)
+	while(i-- != 0)
 	{
 		get_next_line(file, &line);
 		printf("%s \n", &*line);
-		i--;
-	}
-	file = open("/Users/pcollio-/Projects/gnl/testzero", O_RDONLY);
-	printf("-> 3 file: \n");
-	i = 3;
-	while(i != 0)
-	{
-		get_next_line(file, &line);
-		printf("%s \n", &*line);
-		i--;
 	}
 	return (0);
 }

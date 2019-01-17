@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlurker <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mlurker <mlurker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 00:03:30 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/13 00:14:18 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/17 16:48:28 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static t_gnl		*get_first_line(const int fd, char **line, t_gnl *list)
 	ssize_t			rd;
 
 	*line = ft_strnew(BUFF_SIZE); //del
-	new = (t_gnl*)malloc(BUFF_SIZE);
+	new = (t_gnl*)ft_lstnew(NULL, BUFF_SIZE);
 	if (list->buff)
 	{
 		*line = findn(list->buff);
@@ -54,7 +54,6 @@ static t_gnl		*get_first_line(const int fd, char **line, t_gnl *list)
 			new->fd = fd;
 			return (new);
 		}
-		free(new->buff);
 	}
 	return (0);
 }
@@ -62,18 +61,23 @@ static t_gnl		*get_first_line(const int fd, char **line, t_gnl *list)
 int			get_next_line(const int fd, char **line)
 {
 	static t_gnl	*list;
+	t_gnl			*temp;
 
 	if (!(list))
 		list = (t_gnl*)ft_lstnew(NULL, BUFF_SIZE);
+	temp = list;
 	if (list->fd == fd || list->fd == 0)
 	{
 		list = get_first_line(fd, line, list);
 		return (1);
 	}
-	while (list->fd != fd)
-		list = list->next;
-	if (!(list->next))
-		list->next = get_first_line(fd, line, list);
+	while (temp->next && temp->fd != fd)
+		temp = temp->next;
+	if (!(temp->next))
+	{
+		temp = temp->next;
+		temp = get_first_line(fd, line, list);
+	}
 	return (0);
 }
 
@@ -81,13 +85,32 @@ int			main()
 {
 	int		file;
 	char	*line = "12345";
+	int i = 12;
 	file = open("/Users/pcollio-/Projects/gnl/test", O_RDONLY);
-	get_next_line(file, &line);
-	//printf("%s \n", &*line);
-	get_next_line(file, &line);
-	//printf("%s \n", &*line);
-	// file = open("/Users/pcollio-/Projects/gnl/test2", O_RDONLY);
-	// get_next_line(file, &line);
-	// printf("%s \n", &*line);
+	printf("-> 1 file: \n");
+	while(i != 0)
+	{
+		get_next_line(file, &line);
+		printf("%s \n", &*line);
+		i--;
+	}
+	i = 5;
+	file = open("/Users/pcollio-/Projects/gnl/test2", O_RDONLY);
+	printf("-> 2 file: \n");
+	while(i != 0)
+	{
+		get_next_line(file, &line);
+		printf("%s \n", &*line);
+		i--;
+	}
+	file = open("/Users/pcollio-/Projects/gnl/testzero", O_RDONLY);
+	printf("-> 3 file: \n");
+	i = 3;
+	while(i != 0)
+	{
+		get_next_line(file, &line);
+		printf("%s \n", &*line);
+		i--;
+	}
 	return (0);
 }

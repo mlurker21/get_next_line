@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/12 02:14:14 by pcollio-          #+#    #+#             */
-/*   Updated: 2018/12/30 18:20:13 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/13 20:10:43 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *list;
 
-	list = (t_list*)malloc(sizeof(*list) * content_size);
+	list = (t_list*)ft_memalloc(sizeof(*list));
 	if (list)
 	{
 		if (content == NULL)

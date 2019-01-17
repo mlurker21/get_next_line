@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 19:50:33 by pcollio-          #+#    #+#             */
-/*   Updated: 2018/12/30 18:20:13 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/13 20:21:58 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int i;
-	int j;
+	char *tmp;
 
-	i = 0;
-	j = 0;
-	while (s1[j] != '\0')
-		j++;
-	while (s2[i] != '\0')
-		s1[j++] = s2[i++];
-	s1[j] = '\0';
-	return (s1);
+	tmp = s1;
+	while (*s1 != '\0')
+		s1++;
+	while (*s2 != '\0')
+	{
+		*s1 = *s2;
+		s1++;
+		s2++;
+	}
+	*s1 = '\0';
+	return (tmp);
 }

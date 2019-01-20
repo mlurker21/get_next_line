@@ -1,5 +1,5 @@
-*.out
-*.o
-*.a
-*.txt
-cmake-build-debug
+#*.out
+#*.o
+#*.a
+#*.txt
+#cmake-build-debug

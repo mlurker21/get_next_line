@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 21:32:21 by pcollio-          #+#    #+#             */
-/*   Updated: 2018/12/30 18:20:13 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/20 20:08:53 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	while (str[i] != '\0')

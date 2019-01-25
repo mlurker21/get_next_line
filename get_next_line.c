@@ -6,7 +6,7 @@
 /*   By: mlurker <mlurker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 00:03:30 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/25 16:08:33 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/25 23:37:54 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,26 +31,27 @@ static t_gnl		*get_first_line(const int fd, char **line, t_gnl *list)
 	ssize_t			rd = 0;
 
 	new = list;
-	*line = ft_strnew(BUFF_SIZE);
-	if (list->buff)
+	if (new->buff)
 	{
-		ft_strncat(*line, list->buff, ft_len_line(list->buff));
-		if (ft_strcmp(*line, list->buff) != 0)
+		*line = ft_strsub(new->buff, 0, ft_len_line(new->buff));
+		if ((ft_strcmp(*line, new->buff)))
 		{
-			list->buff = ft_strchr(list->buff, '\n') + 1;
-			return (list);
+			new->buff = ft_strchr(new->buff, '\n') + 1;
+			return (new);
 		}
 	}
 	while ((rd = read(fd, buffn, BUFF_SIZE)))
 	{
-		new->buff = ft_strsub(buffn, 0, ft_len_line(buffn));
-		*line = ft_strjoin(*line, new->buff);
-		if (ft_strcmp(new->buff, buffn) != 0)
+		if ((new->buff = ft_strchr(buffn, '\n') + 1))
 		{
-			new->buff = ft_strchr(buffn, '\n') + 1;
+			if (!(*line))
+				*line = ft_strsub(buffn, 0, ft_len_line(buffn));
+			else
+				ft_strncat(*line, buffn, ft_len_line(buffn));
 			new->fd = fd;
 			return (new);
 		}
+		*line = ft_strjoin(*line, buffn);
 		ft_bzero(buffn, BUFF_SIZE + 1);
 	}
 	return (0);
@@ -69,10 +70,13 @@ int			get_next_line(const int fd, char **line)
 		list = get_first_line(fd, line, list);
 		return (1);
 	}
-	while (temp->next && temp->fd != fd)
+	while (temp->fd != fd && temp->next)
 		temp = temp->next;
-	if (!(temp->next))
-		list->next = get_first_line(fd, line, list);
+	if (!(temp = temp->next))
+	{
+		list = get_first_line(fd, line, list);
+		return (1);
+	}
 	return (0);
 }
 

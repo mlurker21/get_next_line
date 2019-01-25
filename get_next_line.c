@@ -6,7 +6,7 @@
 /*   By: mlurker <mlurker@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 00:03:30 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/20 21:48:05 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/25 16:08:33 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ static t_gnl		*get_first_line(const int fd, char **line, t_gnl *list)
 {
 	t_gnl			*new;
 	char			buffn[BUFF_SIZE + 1];
-	ssize_t			rd;
+	ssize_t			rd = 0;
 
-	*line = ft_strnew(BUFF_SIZE); //del
 	new = list;
+	*line = ft_strnew(BUFF_SIZE);
 	if (list->buff)
 	{
 		ft_strncat(*line, list->buff, ft_len_line(list->buff));
@@ -51,6 +51,7 @@ static t_gnl		*get_first_line(const int fd, char **line, t_gnl *list)
 			new->fd = fd;
 			return (new);
 		}
+		ft_bzero(buffn, BUFF_SIZE + 1);
 	}
 	return (0);
 }
@@ -77,25 +78,37 @@ int			get_next_line(const int fd, char **line)
 
 int			main()
 {
-	int		file;
-	char	*line = "12345";
-	int i = 10;
-	file = open("/Users/pcollio-/Projects/gnl/test", O_RDONLY);
-	printf("-> 1 file: \n");
+	int		file1 = 0;
+	int		file2 = 0;
+	char	*line;
+	int i = 5;
+	file1 = open("/Users/pcollio-/Projects/gnl/test", O_RDONLY);
+	ft_putstr("-> 1 file: \n");
 	while(i-- != 0)
 	{
-		get_next_line(file, &line);
+		get_next_line(file1, &line);
+		ft_putstr(&*line);
+		ft_putstr("\n");
 		free(line);
-		printf("%s \n", &*line);
 	}
-	i = 8;
-	file = open("/Users/pcollio-/Projects/gnl/test2", O_RDONLY);
-	printf("-> 2 file: \n");
+	i = 6;
+	file2 = open("/Users/pcollio-/Projects/gnl/test2", O_RDONLY);
+	ft_putstr("-> 2 file: \n");
 	while(i-- != 0)
 	{
-		get_next_line(file, &line);
+		get_next_line(file2, &line);
+		ft_putstr(&*line);
+		ft_putstr("\n");
 		free(line);
-		printf("%s \n", &*line);
+	}
+	i = 3;
+	ft_putstr("-> 1 file: \n");
+	while(i-- != 0)
+	{
+		get_next_line(file1, &line);
+		ft_putstr(&*line);
+		ft_putstr("\n");
+		free(line);
 	}
 	return (0);
 }

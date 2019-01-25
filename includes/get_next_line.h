@@ -6,7 +6,7 @@
 /*   By: mlurker <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 23:01:29 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/20 21:49:22 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/25 14:44:17 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ typedef struct			s_gnl
 		int				fd;
 		struct s_gnl	*next;
 }						t_gnl;
+
+int						get_next_line(const int fd, char **line);
 
 #endif

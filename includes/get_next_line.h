@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:33:07 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/29 16:38:32 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/29 17:47:21 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 typedef struct			s_gnl
 {
+	char			*buffn;
 	char			*buff;
 	int				fd;
 	struct s_gnl	*next;

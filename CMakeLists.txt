@@ -1,12 +1,10 @@
 cmake_minimum_required(VERSION 3.13)
-project(gnl)
+project(get_next_line C)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_C_STANDARD 99)
 
-include_directories(includes)
-include_directories(libft)
-
-add_executable(gnl
+add_executable(get_next_line
+		get_next_line.c
 		includes/get_next_line.h
 		includes/libft.h
 		libft/ft_atoi.c
@@ -71,5 +69,4 @@ add_executable(gnl
 		libft/ft_strtrim.c
 		libft/ft_tolower.c
 		libft/ft_toupper.c
-		libft/ft_word_len.c
-		get_next_line.c)
+		libft/ft_word_len.c)

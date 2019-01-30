@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/29 17:57:54 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/30 16:20:41 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,13 @@ static int		get_line(const int fd, char **line, t_gnl *multy)
 	char	buffn[BUFF_SIZE + 1];
 	ssize_t	rd;
 
+	if (multy->buffn && ft_strlen(multy->buffn))
+	{
+		*line = ft_strjoin(*line, cut_buffn(multy->buffn, multy));
+		multy->buffn = ft_strchr(multy->buffn, '\n') + 1;
+		if (ft_strlen(multy->buffn))
+			return (1);
+	}
 	while ((rd = read(fd, buffn, BUFF_SIZE)))
 	{
 		if (rd < BUFF_SIZE)

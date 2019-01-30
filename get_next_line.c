@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/30 17:36:58 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/30 18:00:58 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ static int		get_line(const int fd, char **line, t_gnl *multy)
 {
 	char	buffn[BUFF_SIZE + 1];
 	ssize_t	rd;
+	char *temp;
 
 	if (multy->buffn && multy->buffn[0])
 	{
@@ -60,7 +61,8 @@ static int		get_line(const int fd, char **line, t_gnl *multy)
 		if ((ft_strchr(buffn, '\n')))
 		{
 			multy->buffn = ft_strchr(buffn, '\n') + 1;
-			*line = ft_strjoin(*line, cut_buffn(buffn, multy));
+			temp = ft_strchr(buffn, '\n');
+			*line = ft_strjoin(*line, ft_strsub(buffn, 0, temp - buffn));
 			return (1);
 		}
 		*line = ft_strjoin(*line, buffn);
@@ -98,6 +100,6 @@ int			main()
 		get_next_line(file1, &line);
 		ft_putstr(&*line);
 		ft_putchar('\n');
-//		ft_strdel(&line);
+		ft_strdel(&line);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/30 16:20:41 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/30 16:23:00 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ int				get_next_line(const int fd, char **line)
 
 int			main()
 {
-	int		file1 = open("/Users/madvil2/Projects/get_next_line/test", O_RDONLY);
-	int		file2 = open("/Users/madvil2/Projects/get_next_line/test2", O_RDONLY);
+	int		file1 = open("/Users/mlurker/Desktop/gnl_new/test", O_RDONLY);
+	int		file2 = open("/Users/mlurker/Desktop/gnl_new/test2", O_RDONLY);
 	char	*line;
 	int		i;
 
@@ -84,6 +84,6 @@ int			main()
 		get_next_line(file1, &line);
 		ft_putstr(&*line);
 		ft_putchar('\n');
-		ft_strdel(&line);
+		//ft_strdel(&line);
 	}
 }

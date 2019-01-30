@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/30 16:23:00 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/30 17:36:58 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,29 @@ static char		*cut_buffn(char *buffn, t_gnl *multy)
 	buff = ft_strnew(BUFF_SIZE);
 	while (*buffn != '\n' && i <= BUFF_SIZE)
 		buff[i++] = *buffn++;
-	multy->buff = buff;
+	buff[i] = '\0';
+//	multy->buff = buff;
+	multy->buff = ft_strdup(buff);
 	ft_strdel(&buff);
 	return (multy->buff);
 }
+
+//int main()
+//{
+//	char* str = "hey\n";
+//	char *temp;
+//	printf("%c", ft_strjoin("1", "22")[3]);
+//	temp = ft_strchr(str, '\n');
+//	str = ft_strsub(str, 0, temp - str);
+//	printf("%s", str);
+//}
 
 static int		get_line(const int fd, char **line, t_gnl *multy)
 {
 	char	buffn[BUFF_SIZE + 1];
 	ssize_t	rd;
 
-	if (multy->buffn && ft_strlen(multy->buffn))
+	if (multy->buffn && multy->buffn[0])
 	{
 		*line = ft_strjoin(*line, cut_buffn(multy->buffn, multy));
 		multy->buffn = ft_strchr(multy->buffn, '\n') + 1;
@@ -45,12 +57,14 @@ static int		get_line(const int fd, char **line, t_gnl *multy)
 			*line = ft_strjoin(*line, ft_strsub(buffn, 0, (size_t)rd));
 			return (0);
 		}
-		if ((multy->buffn = ft_strchr(buffn, '\n') + 1))
+		if ((ft_strchr(buffn, '\n')))
 		{
+			multy->buffn = ft_strchr(buffn, '\n') + 1;
 			*line = ft_strjoin(*line, cut_buffn(buffn, multy));
 			return (1);
 		}
 		*line = ft_strjoin(*line, buffn);
+		return (1);
 	}
 	return (-1);
 }
@@ -84,6 +98,6 @@ int			main()
 		get_next_line(file1, &line);
 		ft_putstr(&*line);
 		ft_putchar('\n');
-		//ft_strdel(&line);
+//		ft_strdel(&line);
 	}
 }

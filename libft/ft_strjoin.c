@@ -6,11 +6,12 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/11 22:40:19 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/25 16:08:26 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/30 17:43:34 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../qwew/includes/libft.h"
+#include "../includes/libft.h"
+#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -24,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s2)
 		return ((char *)s1);
 	if ((str = ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1)) == NULL)
-			return (NULL);
+		return (NULL);
 	i = 0;
 	while (*s1)
 	{
@@ -38,5 +39,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	str[i] = '\0';
 	return (str);
-
 }

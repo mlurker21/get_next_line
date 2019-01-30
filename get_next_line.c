@@ -30,7 +30,7 @@ static int		get_line(const int fd, char **line, t_gnl *multy)
 {
 	char	buffn[BUFF_SIZE + 1];
 	ssize_t	rd;
-	
+
 	while ((rd = read(fd, buffn, BUFF_SIZE)))
 	{
 		if (rd < BUFF_SIZE)
@@ -65,8 +65,8 @@ int				get_next_line(const int fd, char **line)
 
 int			main()
 {
-	int		file1 = open("/Users/pcollio-/Projects/get_next_line/test", O_RDONLY);
-	int		file2 = open("/Users/pcollio-/Projects/get_next_line/test2", O_RDONLY);
+	int		file1 = open("/Users/madvil2/Projects/get_next_line/test", O_RDONLY);
+	int		file2 = open("/Users/madvil2/Projects/get_next_line/test2", O_RDONLY);
 	char	*line;
 	int		i;
 
@@ -77,6 +77,6 @@ int			main()
 		get_next_line(file1, &line);
 		ft_putstr(&*line);
 		ft_putchar('\n');
+		ft_strdel(&line);
 	}
-	ft_strdel(&line);
 }

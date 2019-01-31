@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/31 19:11:17 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/31 19:27:51 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static t_gnl	*init_struct(t_gnl *multy)
 int				get_next_line(const int fd, char **line)
 {
 	static t_gnl	*multy;
-	t_gnl			*temp;
+//	t_gnl			*temp;
 
 	if (!(*line) && fd < 0)
 		return (-1);
@@ -99,7 +99,7 @@ int			main()
 	while (i--)
 	{
 		get_next_line(file1, &line);
-		ft_putstr(&*line);
+		ft_putstr(line);
 		ft_putchar('\n');
 //		ft_strdel(&line);
 	}

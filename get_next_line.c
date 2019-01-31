@@ -6,11 +6,27 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/31 19:27:51 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/31 19:41:30 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/get_next_line.h"
+
+static t_gnl	*init_struct(t_gnl *multy)
+{
+	if ((multy = (t_gnl*)ft_memalloc(sizeof(*multy))))
+	{
+		if (!(multy->buffn = ft_memalloc(BUFF_SIZE)))
+		{
+			free(multy);
+			return (NULL);
+		}
+		multy->buffn = NULL;
+		multy->fd = 0;
+		multy->next = NULL;
+	}
+	return (multy);
+}
 
 static size_t	find_n(const char *buffn)
 {
@@ -56,27 +72,10 @@ static int		get_line(const int fd, char **line, char **multy_n)
 	return (-1);
 }
 
-static t_gnl	*init_struct(t_gnl *multy)
-{
-	multy = (t_gnl*)ft_memalloc(sizeof(*multy));
-	if (multy)
-	{
-		if (!(multy->buffn = malloc(BUFF_SIZE + 1)))
-		{
-			free(multy);
-			return (NULL);
-		}
-		multy->buffn = NULL;
-		multy->fd = 0;
-		multy->next = NULL;
-	}
-	return (multy);
-}
-
 int				get_next_line(const int fd, char **line)
 {
 	static t_gnl	*multy;
-//	t_gnl			*temp;
+	t_gnl			*temp;
 
 	if (!(*line) && fd < 0)
 		return (-1);
@@ -89,8 +88,8 @@ int				get_next_line(const int fd, char **line)
 
 int			main()
 {
-	int		file1 = open("/Users/mlurker/Desktop/gnl_new/test", O_RDONLY);
-	int		file2 = open("/Users/mlurker/Desktop/gnl_new/test2", O_RDONLY);
+	int		file1 = open("/Users/pcollio-/Projects/get_next_line/test", O_RDONLY);
+	int		file2 = open("/Users/pcollio-/Projects/get_next_line/test2", O_RDONLY);
 	char	*line;
 	int		i;
 
@@ -99,8 +98,7 @@ int			main()
 	while (i--)
 	{
 		get_next_line(file1, &line);
-		ft_putstr(line);
+		ft_putstr(&*line);
 		ft_putchar('\n');
-//		ft_strdel(&line);
 	}
 }

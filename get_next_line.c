@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/31 16:49:11 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/01/31 17:23:26 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,13 @@ static int		get_line(const int fd, char **line,t_gnl *multy)
 {
 	char	buffn[BUFF_SIZE + 1];
 	ssize_t	rd;
+	size_t i = 0;
 //	char *temp;
 
 	if (multy->buffn && multy->buffn[0])
 	{
 		*line = ft_strjoin(*line, cut_buffn(multy->buffn, multy));
+//				ft_strsub(*(&multy->buffn), 0, i));
 		multy->buffn = ft_strchr(multy->buffn, '\n') + 1;
 		if (multy->buffn[0])
 			return (1);
@@ -52,10 +54,15 @@ static int		get_line(const int fd, char **line,t_gnl *multy)
 		if ((ft_strchr(buffn, '\n')))
 		{
 			multy->buffn = ft_strchr(buffn, '\n') + 1;
-			*line = ft_strjoin(*line, cut_buffn(buffn, multy));
+			//multy->buff = ft_strchr(buffn, '\n');
+			while (buffn[i] != '\n' && buffn[i] != '\0')
+				i++;
+			*line = ft_strsub(buffn, 0, i);
+//					cut_buffn(buffn, multy));
 			return (1);
 		}
-		*line = ft_strjoin(*line, buffn);
+		*line = ft_strsub(buffn, 0, BUFF_SIZE);
+//		bzero(buffn, BUFF_SIZE);
 	}
 	return (-1);
 }

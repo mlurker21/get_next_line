@@ -12,7 +12,6 @@ add_executable(get_next_line
 		libft/ft_count_words.c
 		libft/ft_foreach.c
 		libft/ft_freearr.c
-		libft/ft_intlen.c
 		libft/ft_isalnum.c
 		libft/ft_isalpha.c
 		libft/ft_isascii.c
@@ -69,4 +68,4 @@ add_executable(get_next_line
 		libft/ft_strtrim.c
 		libft/ft_tolower.c
 		libft/ft_toupper.c
-		libft/ft_word_len.c)
+		libft/ft_word_len.c libft/ft_strcspn.c)

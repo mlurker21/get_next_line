@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/31 16:24:03 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/31 16:49:11 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,7 @@ static int		get_line(const int fd, char **line,t_gnl *multy)
 		if ((ft_strchr(buffn, '\n')))
 		{
 			multy->buffn = ft_strchr(buffn, '\n') + 1;
-			//multy->buff = ft_strchr(buffn, '\n');
 			*line = ft_strjoin(*line, cut_buffn(buffn, multy));
-//					ft_strsub(buffn, 0, multy->buff - buffn));
 			return (1);
 		}
 		*line = ft_strjoin(*line, buffn);
@@ -94,25 +92,3 @@ int			main()
 		ft_strdel(&line);
 	}
 }
-
-
-//void rot(char *av)
-//{
-//	while (*av)
-//	{
-//		if (*av >= 'a' && *av <= 'y')
-//			*av += 1;
-//		if (*av >= 'A' && *av <= 'Y')
-//			*av += 1;
-//		if (*av == 'z' || *av == 'Z')
-//			*av -= 25;
-//		write(1, av, 1);
-//		av++;
-//	}
-//}
-//
-//int main()
-//{
-//	char str[] = "zYzYabcy";
-//	rot(str);
-//}

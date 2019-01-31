@@ -6,46 +6,40 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/31 17:31:42 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/31 19:11:17 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/get_next_line.h"
 
-static char		*cut_buffn(char *buffn, t_gnl *multy)
+static size_t	find_n(const char *buffn)
 {
-	int		i;
-	char	*buff;
+	size_t	i;
 
 	i = 0;
-	buff = ft_strnew(BUFF_SIZE);
-//	if (buffn[0] == '\n' && buffn[1] )
-	while (*buffn != '\n' && i <= BUFF_SIZE)
-		buff[i++] = *buffn++;
-	buff[i] = '\0';
-//	multy->buff = buff;
-//	multy->buff = ft_strdup(buff);
-	//ft_strdel(&buff);
-	return (buff);
+	while (buffn[i] && buffn[i] != '\n')
+		i++;
+	return (i);
 }
 
-static int		get_line(const int fd, char **line,t_gnl **multy)
+static int		get_line(const int fd, char **line, char **multy_n)
 {
 	char	buffn[BUFF_SIZE + 1];
 	ssize_t	rd;
 	size_t i = 0;
 //	char *temp;
 
-	if ((*multy)->buffn && (*multy)->buffn[0])
+	*line = ft_strnew(0);
+	if (*multy_n)
 	{
-		*line = ft_strjoin(*line, cut_buffn((*multy)->buffn, *multy));
-//				ft_strsub(*(&multy->buffn), 0, i));
-		(*multy)->buffn = ft_strchr((*multy)->buffn, '\n') + 1;
-		if ((*multy)->buffn[0])
+		*line = ft_strjoin(*line, ft_strsub(*multy_n, 0, find_n(*multy_n)));
+		*multy_n = ft_strchr(*multy_n, '\n') + 1;
+		if (*multy_n)
 			return (1);
 	}
 	while ((rd = read(fd, buffn, BUFF_SIZE)))
 	{
+//		*multy[rd] = '\0';
 		if (rd < BUFF_SIZE)
 		{
 			*line = ft_strsub(buffn, 0, (size_t)rd);
@@ -53,20 +47,31 @@ static int		get_line(const int fd, char **line,t_gnl **multy)
 		}
 		if ((ft_strchr(buffn, '\n')))
 		{
-			(*multy)->buffn = ft_strchr(buffn, '\n') + 1;
-			//multy->buff = ft_strchr(buffn, '\n');
-			while (buffn[i] != '\n' && buffn[i] != '\0')
-				i++;
-			*line = ft_strsub(buffn, 0, i);
-//					cut_buffn(buffn, multy));
+			*multy_n = ft_strchr(buffn, '\n') + 1;
+			*line = ft_strjoin(*line, ft_strsub(buffn, 0, find_n(buffn)));
 			return (1);
 		}
-		*line = ft_strsub(buffn, 0, BUFF_SIZE);
-//		bzero(buffn, BUFF_SIZE);
+		*line = ft_strjoin(*line, ft_strsub(buffn, 0, BUFF_SIZE));
 	}
 	return (-1);
 }
 
+static t_gnl	*init_struct(t_gnl *multy)
+{
+	multy = (t_gnl*)ft_memalloc(sizeof(*multy));
+	if (multy)
+	{
+		if (!(multy->buffn = malloc(BUFF_SIZE + 1)))
+		{
+			free(multy);
+			return (NULL);
+		}
+		multy->buffn = NULL;
+		multy->fd = 0;
+		multy->next = NULL;
+	}
+	return (multy);
+}
 
 int				get_next_line(const int fd, char **line)
 {
@@ -76,8 +81,8 @@ int				get_next_line(const int fd, char **line)
 	if (!(*line) && fd < 0)
 		return (-1);
 	if (!(multy))
-		multy = (t_gnl*)ft_lstnew(NULL, BUFF_SIZE);
-	if (get_line(fd, line, &multy))
+		multy = init_struct(multy);
+	if (get_line(fd, line, &(multy->buffn)))
 		return (1);
 	return (0);
 }
@@ -96,6 +101,6 @@ int			main()
 		get_next_line(file1, &line);
 		ft_putstr(&*line);
 		ft_putchar('\n');
-		ft_strdel(&line);
+//		ft_strdel(&line);
 	}
 }

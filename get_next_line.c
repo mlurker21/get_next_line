@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/30 18:00:58 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/31 16:24:03 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,36 +19,27 @@ static char		*cut_buffn(char *buffn, t_gnl *multy)
 
 	i = 0;
 	buff = ft_strnew(BUFF_SIZE);
+//	if (buffn[0] == '\n' && buffn[1] )
 	while (*buffn != '\n' && i <= BUFF_SIZE)
 		buff[i++] = *buffn++;
 	buff[i] = '\0';
 //	multy->buff = buff;
-	multy->buff = ft_strdup(buff);
-	ft_strdel(&buff);
-	return (multy->buff);
+//	multy->buff = ft_strdup(buff);
+	//ft_strdel(&buff);
+	return (buff);
 }
 
-//int main()
-//{
-//	char* str = "hey\n";
-//	char *temp;
-//	printf("%c", ft_strjoin("1", "22")[3]);
-//	temp = ft_strchr(str, '\n');
-//	str = ft_strsub(str, 0, temp - str);
-//	printf("%s", str);
-//}
-
-static int		get_line(const int fd, char **line, t_gnl *multy)
+static int		get_line(const int fd, char **line,t_gnl *multy)
 {
 	char	buffn[BUFF_SIZE + 1];
 	ssize_t	rd;
-	char *temp;
+//	char *temp;
 
 	if (multy->buffn && multy->buffn[0])
 	{
 		*line = ft_strjoin(*line, cut_buffn(multy->buffn, multy));
 		multy->buffn = ft_strchr(multy->buffn, '\n') + 1;
-		if (ft_strlen(multy->buffn))
+		if (multy->buffn[0])
 			return (1);
 	}
 	while ((rd = read(fd, buffn, BUFF_SIZE)))
@@ -61,12 +52,12 @@ static int		get_line(const int fd, char **line, t_gnl *multy)
 		if ((ft_strchr(buffn, '\n')))
 		{
 			multy->buffn = ft_strchr(buffn, '\n') + 1;
-			temp = ft_strchr(buffn, '\n');
-			*line = ft_strjoin(*line, ft_strsub(buffn, 0, temp - buffn));
+			//multy->buff = ft_strchr(buffn, '\n');
+			*line = ft_strjoin(*line, cut_buffn(buffn, multy));
+//					ft_strsub(buffn, 0, multy->buff - buffn));
 			return (1);
 		}
 		*line = ft_strjoin(*line, buffn);
-		return (1);
 	}
 	return (-1);
 }
@@ -103,3 +94,25 @@ int			main()
 		ft_strdel(&line);
 	}
 }
+
+
+//void rot(char *av)
+//{
+//	while (*av)
+//	{
+//		if (*av >= 'a' && *av <= 'y')
+//			*av += 1;
+//		if (*av >= 'A' && *av <= 'Y')
+//			*av += 1;
+//		if (*av == 'z' || *av == 'Z')
+//			*av -= 25;
+//		write(1, av, 1);
+//		av++;
+//	}
+//}
+//
+//int main()
+//{
+//	char str[] = "zYzYabcy";
+//	rot(str);
+//}

@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/11 22:40:19 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/30 17:43:34 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/01/30 19:52:22 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 && !s2)
 		return (NULL);
 	if (!s1)
-		return ((char *)s2);
+	{
+		str = ft_memalloc(ft_strlen(s2) + 1);
+		str = ft_strcpy(str, s2);
+		return (str);
+	}
 	if (!s2)
 		return ((char *)s1);
 	if ((str = ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1)) == NULL)

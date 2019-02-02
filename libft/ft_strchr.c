@@ -3,18 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fsmith <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/09 19:00:20 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/01/31 19:45:25 by pcollio-         ###   ########.fr       */
+/*   Created: 2018/12/02 15:42:06 by fsmith            #+#    #+#             */
+/*   Updated: 2019/02/02 17:01:30 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char		*ft_strchr(const char *s, int c)
 {
-	if (c == '\0')
-		return ((char *)s + ft_strlen(s));
-	return (ft_memchr(s, c, ft_strlen(s)));
+	while (*s)
+	{
+		if (*s == c)
+			return ((char*)s);
+		s++;
+	}
+	if (*s == c)
+		return ((char*)s);
+	else
+		return (NULL);
 }

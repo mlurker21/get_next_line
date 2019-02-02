@@ -13,80 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7e728337-46df-4cba-bf50-7a3b04b5ee7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/get_next_line.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/get_next_line.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/get_next_line.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/get_next_line.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/get_next_line.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/get_next_line.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/get_next_line.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/get_next_line.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/libft.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_atoi.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_atoi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_bzero.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_bzero.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_count_words.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_count_words.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_isalnum.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_isalnum.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_isalpha.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_isalpha.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_isascii.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_isascii.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_isdigit.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_isdigit.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_isprint.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_isprint.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_itoa.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_itoa.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstadd.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstadd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstdel.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstdel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstdelone.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstdelone.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstiter.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstiter.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstmap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_lstnew.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_lstnew.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_memalloc.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_memalloc.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_memccpy.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_memccpy.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_memchr.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_memchr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_memcmp.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_memcmp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_memcpy.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_memcpy.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_memdel.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_memdel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_memmove.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_memmove.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_memset.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_memset.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_putchar.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_putchar.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_putchar_fd.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_putchar_fd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_putendl.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_putendl.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_putendl_fd.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_putendl_fd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_putnbr.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_putnbr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_putnbr_fd.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_putnbr_fd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_putstr.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_putstr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_putstr_fd.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_putstr_fd.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strcat.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strcat.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strchr.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strchr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strclr.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strclr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strcmp.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strcmp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strcpy.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strcpy.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strdel.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strdel.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strdup.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strdup.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strequ.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strequ.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_striter.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_striter.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_striteri.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_striteri.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strjoin.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strjoin.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strlcat.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strlcat.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strlen.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strlen.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strmap.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strmapi.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strmapi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strncat.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strncat.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strncmp.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strncmp.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strncpy.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strncpy.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strnequ.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strnequ.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strnew.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strnew.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strnstr.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strnstr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strrchr.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strrchr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strsplit.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strsplit.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strstr.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strstr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strsub.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strsub.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strtrim.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strtrim.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_tolower.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_tolower.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_toupper.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_toupper.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test" beforeDir="false" afterPath="$PROJECT_DIR$/test" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -104,17 +32,26 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/get_next_line.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="400">
-                  <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+                <state relative-caret-position="658">
+                  <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/includes/get_next_line.h">
+            <entry file="file://$PROJECT_DIR$/libft/ft_putendl.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+                <state relative-caret-position="204">
+                  <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/libft/ft_strsub.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -128,6 +65,24 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/libft/ft_putstr.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/libft/ft_putchar.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="238">
+                  <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -135,8 +90,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="3" selection-start-column="3" selection-end-column="3" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -173,13 +128,15 @@
         <option value="$PROJECT_DIR$/libft/ft_strchr.c" />
         <option value="$PROJECT_DIR$/includes/get_next_line.h" />
         <option value="$PROJECT_DIR$/test" />
+        <option value="$PROJECT_DIR$/../gnl_test/get_next_line.h" />
+        <option value="$PROJECT_DIR$/../gnl_test/get_next_line.c" />
         <option value="$PROJECT_DIR$/get_next_line.c" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="173" />
-    <option name="y" value="23" />
+    <option name="x" value="294" />
+    <option name="y" value="48" />
     <option name="width" value="1866" />
     <option name="height" value="1337" />
   </component>
@@ -261,7 +218,7 @@
       <workItem from="1548866843080" duration="2305000" />
       <workItem from="1548931470552" duration="4363000" />
       <workItem from="1549115897288" duration="332000" />
-      <workItem from="1549116477124" duration="1176000" />
+      <workItem from="1549116477124" duration="8191000" />
     </task>
     <task id="LOCAL-00001" summary="dasha">
       <created>1548854512611</created>
@@ -305,27 +262,35 @@
       <option name="project" value="LOCAL" />
       <updated>1548944651481</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="dasha">
+      <created>1549117655011</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1549117655011</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25744000" />
+    <option name="totallyTimeSpent" value="32759000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="173" y="23" width="1866" height="1337" extended-state="0" />
+    <frame x="294" y="48" width="1866" height="1337" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16502193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28803906" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32384053" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27420667" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30349877" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32790887" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32790887" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.2595606" />
@@ -346,15 +311,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="dasha" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/get_next_line.c</url>
-          <line>99</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="multy" />
@@ -481,21 +437,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_strsub.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_strnew.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libft/ft_putstr.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
@@ -519,22 +461,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/get_next_line.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test2">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_strchr.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -543,10 +471,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_putchar.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_putstr.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_strsub.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/get_next_line.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libft/ft_putendl.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/get_next_line.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state relative-caret-position="658">
+          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
         </state>
       </provider>
     </entry>

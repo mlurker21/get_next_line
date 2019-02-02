@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:33:07 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/02/02 16:58:16 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/02/02 18:27:34 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "../includes/libft.h"
 # include <sys/types.h>
 # include <sys/uio.h>
-# define BUFF_SIZE 5
+# define BUFF_SIZE 20
 
 //typedef struct			s_gnl
 //{

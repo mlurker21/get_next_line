@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:33:07 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/02/02 18:27:34 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/02/02 21:44:57 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,7 @@
 # include "../includes/libft.h"
 # include <sys/types.h>
 # include <sys/uio.h>
-# define BUFF_SIZE 20
-
-//typedef struct			s_gnl
-//{
-//	char			*buffn;
-//	int				fd;
-//	struct s_gnl	*next;
-//}						t_gnl;
+# define BUFF_SIZE 13
 
 int						get_next_line(const int fd, char **line);
 

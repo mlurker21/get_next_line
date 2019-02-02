@@ -6,7 +6,7 @@
 /*   By: fsmith <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/12 21:12:16 by fsmith            #+#    #+#             */
-/*   Updated: 2019/02/02 17:01:30 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/02/02 22:17:05 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 			res[i + j] = s2[j];
 			j++;
 		}
+//		free((char*)s1);
 		return (res);
 	}
 	return (NULL);

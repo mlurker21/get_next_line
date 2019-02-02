@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/02/02 22:40:21 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/02/02 23:14:20 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,24 +47,20 @@ static int		get_line(const int fd, char **line, char **multy_n)
 		{
 			*line = ft_strjoin(*line, ft_strsub(temp, 0, find_n(temp)));
 			if (ft_strchr(temp, '\n'))
-			{
 				*multy_n = ft_strchr(temp, '\n') + 1;
-				free(temp);
-				return (1);
-			}
-			free(temp);
-			return (0);
+			break ;
 		}
 		if ((ft_strchr(temp, '\n')))
 		{
 			*multy_n = ft_strchr(temp, '\n') + 1;
 			*line = ft_strjoin(*line, ft_strsub(temp, 0, find_n(temp)));
-			free(temp);
-			return (1);
+			break ;
 		}
 		*line = ft_strjoin(*line, temp);
 	}
 	free(temp);
+	if (rd)
+		return (1);
 	return (0);
 }
 
@@ -81,19 +77,50 @@ int				get_next_line(const int fd, char **line)
 }
 
 
-int			main()
+int				main(void)
 {
-	int		file1 = open("/Users/mlurker/Desktop/gnl_new copy/test", O_RDONLY);
-	int		file2 = open("/Users/mlurker/Desktop/gnl_new copy/test2", O_RDONLY);
-	char	*line;
-	int		i;
+	char		*line;
+	int			fd;
+	int			ret;
+	int			count_lines;
+	int			errors;
 
-	ft_putstr("-> 1 file: \n");
-	i = 8;
-	while (i--)
+	fd = 0;
+	count_lines = 0;
+	errors = 0;
+	line = NULL;
+	while ((ret = get_next_line(fd, &line)) > 0)
 	{
-		get_next_line(file1, &line);
-		ft_putstr(line);
-		ft_putchar('\n');
+		if (count_lines == 0 && strcmp(line, "1234567") != 0)
+			errors++;
+		if (count_lines == 1 && strcmp(line, "abcdefgh") != 0)
+			errors++;
+		count_lines++;
+		if (count_lines > 50)
+			break ;
 	}
+	if (count_lines != 2)
+		printf("-> must have returned '1' twice instead of %d time(s)\n", count_lines);
+	if (errors > 0)
+		printf("-> must have read \"1234567\" and \"abcdefgh\"\n");
+	if (count_lines == 2 && errors == 0)
+		printf("OK");
+	return (0);
 }
+
+//int			main()
+//{
+//	int		file1 = open("/Users/mlurker/Desktop/gnl_new copy/test", O_RDONLY);
+//	int		file2 = open("/Users/mlurker/Desktop/gnl_new copy/test2", O_RDONLY);
+//	char	*line;
+//	int		i;
+//
+//	ft_putstr("-> 1 file: \n");
+//	i = 8;
+//	while (i--)
+//	{
+//		get_next_line(file1, &line);
+//		ft_putstr(line);
+//		ft_putchar('\n');
+//	}
+//}

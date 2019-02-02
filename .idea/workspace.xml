@@ -14,10 +14,6 @@
     <list default="true" id="7e728337-46df-4cba-bf50-7a3b04b5ee7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/get_next_line.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/get_next_line.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_memalloc.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_memalloc.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strjoin.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strjoin.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" afterPath="$PROJECT_DIR$/test" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+            <state relative-caret-position="103">
+              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="39" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -41,8 +37,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/get_next_line.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="77" column="15" lean-forward="true" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
+            <state relative-caret-position="1144">
+              <caret line="83" column="20" lean-forward="true" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#950#975#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +58,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/get_next_line.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state relative-caret-position="289">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <folding>
+                <element signature="e#950#981#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/libft/ft_strjoin.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
-              <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -100,14 +111,15 @@
         <option value="$PROJECT_DIR$/libft/ft_strnew.c" />
         <option value="$PROJECT_DIR$/libft/ft_putstr.c" />
         <option value="$PROJECT_DIR$/libft/ft_strchr.c" />
-        <option value="$PROJECT_DIR$/../gnl_test/get_next_line.h" />
         <option value="$PROJECT_DIR$/libft/ft_memalloc.c" />
         <option value="$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl1_3.c" />
         <option value="$PROJECT_DIR$/includes/get_next_line.h" />
-        <option value="$PROJECT_DIR$/test" />
-        <option value="$PROJECT_DIR$/get_next_line.c" />
         <option value="$PROJECT_DIR$/libft/ft_strjoin.c" />
+        <option value="$PROJECT_DIR$/test" />
+        <option value="$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl8_2.c" />
         <option value="$PROJECT_DIR$/../gnl_test/get_next_line.c" />
+        <option value="$PROJECT_DIR$/../gnl_test/get_next_line.h" />
+        <option value="$PROJECT_DIR$/get_next_line.c" />
       </list>
     </option>
   </component>
@@ -195,7 +207,7 @@
       <workItem from="1548866843080" duration="2305000" />
       <workItem from="1548931470552" duration="4363000" />
       <workItem from="1549115897288" duration="332000" />
-      <workItem from="1549116477124" duration="16588000" />
+      <workItem from="1549116477124" duration="19646000" />
     </task>
     <task id="LOCAL-00001" summary="dasha">
       <created>1548854512611</created>
@@ -253,21 +265,36 @@
       <option name="project" value="LOCAL" />
       <updated>1549127380033</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="very very fix">
+      <created>1549136090045</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1549136090045</updated>
+    </task>
+    <task id="LOCAL-00010" summary="very very fix">
+      <created>1549136477260</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1549136477260</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41156000" />
+    <option name="totallyTimeSpent" value="44214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="294" y="29" width="1866" height="1337" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16502193" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16502193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.16842961" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16842961" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30349877" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -314,20 +341,16 @@
     <MESSAGE value="эдик" />
     <MESSAGE value="dasha" />
     <MESSAGE value="very fix?" />
-    <option name="LAST_COMMIT_MESSAGE" value="very fix?" />
+    <MESSAGE value="very very fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="very very fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/get_next_line.c</url>
-          <line>126</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/get_next_line.c</url>
           <line>91</line>
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -470,13 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_putendl.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -536,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/get_next_line.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libft/ft_memalloc.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -553,7 +562,7 @@
     <entry file="file://$PROJECT_DIR$/libft/ft_strjoin.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
-          <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -564,20 +573,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.c">
+    <entry file="file://$PROJECT_DIR$/test">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/includes/get_next_line.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#950#981#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl8_2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#950#975#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/get_next_line.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="77" column="15" lean-forward="true" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
+        <state relative-caret-position="1144">
+          <caret line="83" column="20" lean-forward="true" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
         </state>
       </provider>
     </entry>

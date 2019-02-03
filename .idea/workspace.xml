@@ -11,11 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e728337-46df-4cba-bf50-7a3b04b5ee7d" name="Default Changelist" comment="use break;">
+    <list default="true" id="7e728337-46df-4cba-bf50-7a3b04b5ee7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/ft_strjoin.c" beforeDir="false" afterPath="$PROJECT_DIR$/libft/ft_strjoin.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test" beforeDir="false" afterPath="$PROJECT_DIR$/test" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,20 +27,29 @@
     <splitter split-orientation="horizontal" split-proportion="0.8025099">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+                <state relative-caret-position="634">
+                  <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl1_3.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="752">
+                  <caret line="52" selection-start-line="10" selection-end-line="52" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/get_next_line.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="712">
-                  <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+                <state relative-caret-position="570">
+                  <caret line="48" column="5" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="48" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -51,20 +58,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="119">
-                  <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+                  <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl3_3.c">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl2_3.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" selection-start-line="10" selection-end-line="51" selection-end-column="1" />
+                <state relative-caret-position="136">
+                  <caret line="8" selection-start-line="8" selection-end-line="41" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -111,8 +118,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="294" />
-    <option name="y" value="23" />
+    <option name="x" value="871" />
+    <option name="y" value="103" />
     <option name="width" value="1866" />
     <option name="height" value="1337" />
   </component>
@@ -132,11 +139,6 @@
               <item name="get_next_line" type="b2602c69:ProjectViewProjectNode" />
               <item name="gnl_new copy" type="462c0819:PsiDirectoryNode" />
               <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="get_next_line" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gnl_new copy" type="462c0819:PsiDirectoryNode" />
-              <item name="libft" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -203,7 +205,7 @@
       <workItem from="1549116477124" duration="22889000" />
       <workItem from="1549189646033" duration="985000" />
       <workItem from="1549190663676" duration="8388000" />
-      <workItem from="1549199111990" duration="4457000" />
+      <workItem from="1549199111990" duration="5336000" />
     </task>
     <task id="LOCAL-00001" summary="dasha">
       <created>1548854512611</created>
@@ -289,11 +291,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549139136617</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="dasha">
+      <created>1549205409629</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1549205409629</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61287000" />
+    <option name="totallyTimeSpent" value="62166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="294" y="23" width="1866" height="1337" extended-state="0" />
@@ -349,22 +358,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="home" />
     <MESSAGE value="эдик" />
-    <MESSAGE value="dasha" />
     <MESSAGE value="very fix?" />
     <MESSAGE value="very very fix" />
     <MESSAGE value="use break;" />
-    <option name="LAST_COMMIT_MESSAGE" value="use break;" />
+    <MESSAGE value="dasha" />
+    <option name="LAST_COMMIT_MESSAGE" value="dasha" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/get_next_line.c</url>
-          <line>89</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="multy" />
@@ -582,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl1_3.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="51" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl5_3.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -628,13 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="10" selection-start-line="10" selection-end-line="47" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -693,17 +679,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_next_line.c">
+    <entry file="file://$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl1_3.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="752">
+          <caret line="52" selection-start-line="10" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../final_libft/test_lib/42FileChecker/srcs/gnl/gnl2_3.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="41" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../gnl_test/get_next_line.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="634">
+          <caret line="74" column="28" lean-forward="true" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_next_line.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="48" selection-end-column="5" />
         </state>
       </provider>
     </entry>

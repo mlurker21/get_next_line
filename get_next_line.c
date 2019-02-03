@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/02/03 17:40:02 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/02/03 18:01:04 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int		get_line(const int fd, char **line, char **multy_n)
 	*line = ft_strnew(0);
 	if (multy_n[0] && ft_strlen(*multy_n))
 	{
-		*line = cut_line(line, &multy_n[fd], *multy_n);
+		*line = cut_line(line, multy_n, *multy_n);
 		if (ft_strlen(*multy_n))
 			return (1);
 		check = 1;
@@ -54,7 +54,7 @@ static int		get_line(const int fd, char **line, char **multy_n)
 		temp[rd] = '\0';
 		if (ft_strchr(temp, '\n') || rd < BUFF_SIZE)
 		{
-			*line = cut_line(line, &multy_n[fd], temp);
+			*line = cut_line(line, multy_n, temp);
 			check = 1;
 			break ;
 		}
@@ -80,6 +80,7 @@ int				get_next_line(const int fd, char **line)
 
 int			main()
 {
+//	int		file1 = open("/Users/mlurker/Desktop/final_libft/test_lib/42FileChecker/srcs/gnl/gnl7_2.txt", O_RDONLY);
 	int		file1 = open("/Users/mlurker/Desktop/gnl_new copy/test", O_RDONLY);
 	int		file2 = open("/Users/mlurker/Desktop/gnl_new copy/test2", O_RDONLY);
 	char	*line;
@@ -92,6 +93,5 @@ int			main()
 		get_next_line(file1, &line);
 		ft_putstr(line);
 		ft_putchar('\n');
-		free(line);
 	}
 }

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/mlurker/Desktop/gnl_new copy/get_next_line.c
+includes/get_next_line.h
+/Users/mlurker/Desktop/gnl_new copy/includes/get_next_line.h
+
+/Users/mlurker/Desktop/gnl_new copy/includes/get_next_line.h
+../includes/libft.h
+/Users/mlurker/Desktop/gnl_new copy/includes/libft.h
+sys/types.h
+-
+sys/uio.h
+-
+
+/Users/mlurker/Desktop/gnl_new copy/includes/libft.h
+unistd.h
+-
+fcntl.h
+-
+stdlib.h
+-
+string.h
+-
+ctype.h
+-
+stdio.h
+-
+

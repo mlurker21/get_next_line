@@ -6,20 +6,29 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/02/02 23:25:20 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/02/03 17:40:02 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/get_next_line.h"
 
-static size_t	find_n(const char *buffn)
+static char		*cut_line(char **line1, char **multy_n, char const *temp)
 {
 	size_t	i;
+	char	*line_n;
 
 	i = 0;
-	while (buffn[i] && buffn[i] != '\n')
-		i++;
-	return (i);
+	line_n = ft_strnew(0);
+	while (*temp && *temp != '\n')
+		line_n[i++] = *temp++;
+	line_n[i] = '\0';
+	*line1 = ft_strcat(*line1, line_n);
+	if (*temp)
+		*multy_n = ft_strchr(temp, '\n') + 1;
+	else
+		*multy_n = ft_strcpy(*multy_n, temp);
+	free(line_n);
+	return (*line1);
 }
 
 static int		get_line(const int fd, char **line, char **multy_n)
@@ -27,39 +36,32 @@ static int		get_line(const int fd, char **line, char **multy_n)
 	char	buffn[BUFF_SIZE + 1];
 	ssize_t	rd;
 	char	*temp;
+	int 	check;
 
+	check = 0;
 	*line = ft_strnew(0);
-	if (multy_n[0] != '\0')
+	if (multy_n[0] && ft_strlen(*multy_n))
 	{
-		*line = ft_strjoin(*line, ft_strsub(*multy_n, 0, find_n(*multy_n)));
-		if ((ft_strchr(*multy_n, '\n')))
-		{
-			*multy_n = ft_strchr(*multy_n, '\n') + 1;
+		*line = cut_line(line, &multy_n[fd], *multy_n);
+		if (ft_strlen(*multy_n))
 			return (1);
-		}
+		check = 1;
 	}
-	temp = (char*)malloc(sizeof(char) * BUFF_SIZE);
+	temp = ft_strnew(0);
 	while ((rd = read(fd, buffn, BUFF_SIZE)))
 	{
-		temp = ft_strdup(buffn);
+		temp = ft_strcpy(temp, buffn);
 		temp[rd] = '\0';
-		if (rd < BUFF_SIZE)
+		if (ft_strchr(temp, '\n') || rd < BUFF_SIZE)
 		{
-			*line = ft_strjoin(*line, ft_strsub(temp, 0, find_n(temp)));
-			if (ft_strchr(temp, '\n'))
-				*multy_n = ft_strchr(temp, '\n') + 1;
+			*line = cut_line(line, &multy_n[fd], temp);
+			check = 1;
 			break ;
 		}
-		if ((ft_strchr(temp, '\n')))
-		{
-			*multy_n = ft_strchr(temp, '\n') + 1;
-			*line = ft_strjoin(*line, ft_strsub(temp, 0, find_n(temp)));
-			break ;
-		}
-		*line = ft_strjoin(*line, temp);
+		*line = ft_strcat(*line, temp);
 	}
 	free(temp);
-	if (rd)
+	if (rd || check)
 		return (1);
 	return (0);
 }
@@ -90,5 +92,6 @@ int			main()
 		get_next_line(file1, &line);
 		ft_putstr(line);
 		ft_putchar('\n');
+		free(line);
 	}
 }

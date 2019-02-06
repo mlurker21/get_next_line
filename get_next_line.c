@@ -6,13 +6,13 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 16:35:39 by pcollio-          #+#    #+#             */
-/*   Updated: 2019/02/03 18:01:04 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/02/03 21:12:28 by mlurker          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/get_next_line.h"
 
-static char		*cut_line(char **line1, char **multy_n, char const *temp)
+static void		cut_line(char **line, char *temp)
 {
 	size_t	i;
 	char	*line_n;
@@ -22,13 +22,8 @@ static char		*cut_line(char **line1, char **multy_n, char const *temp)
 	while (*temp && *temp != '\n')
 		line_n[i++] = *temp++;
 	line_n[i] = '\0';
-	*line1 = ft_strcat(*line1, line_n);
-	if (*temp)
-		*multy_n = ft_strchr(temp, '\n') + 1;
-	else
-		*multy_n = ft_strcpy(*multy_n, temp);
+	*line = ft_strcat(*line, line_n);
 	free(line_n);
-	return (*line1);
 }
 
 static int		get_line(const int fd, char **line, char **multy_n)
@@ -36,32 +31,42 @@ static int		get_line(const int fd, char **line, char **multy_n)
 	char	buffn[BUFF_SIZE + 1];
 	ssize_t	rd;
 	char	*temp;
-	int 	check;
 
-	check = 0;
 	*line = ft_strnew(0);
-	if (multy_n[0] && ft_strlen(*multy_n))
+	if (multy_n[0] != '\0')
 	{
-		*line = cut_line(line, multy_n, *multy_n);
-		if (ft_strlen(*multy_n))
+		cut_line(line, *multy_n);
+//		*line = ft_strjoin(*line, ft_strsub(*multy_n, 0, find_n(*multy_n)));
+		if ((ft_strchr(*multy_n, '\n')))
+		{
+			*multy_n = ft_strchr(*multy_n, '\n') + 1;
 			return (1);
-		check = 1;
+		}
 	}
-	temp = ft_strnew(0);
+	temp = ft_memalloc(BUFF_SIZE);
 	while ((rd = read(fd, buffn, BUFF_SIZE)))
 	{
 		temp = ft_strcpy(temp, buffn);
 		temp[rd] = '\0';
-		if (ft_strchr(temp, '\n') || rd < BUFF_SIZE)
+		if (rd < BUFF_SIZE)
 		{
-			*line = cut_line(line, multy_n, temp);
-			check = 1;
+			cut_line(line, temp);
+//			*line = ft_strjoin(*line, ft_strsub(temp, 0, find_n(temp)));
+			if (ft_strchr(temp, '\n'))
+				*multy_n = ft_strchr(temp, '\n') + 1;
 			break ;
 		}
-		*line = ft_strcat(*line, temp);
+		if (ft_strchr(temp, '\n'))
+		{
+			*multy_n = ft_strchr(temp, '\n') + 1;
+			cut_line(line, temp);
+//			*line = ft_strjoin(*line, ft_strsub(temp, 0, find_n(temp)));
+			break ;
+		}
+		*line = ft_strjoin(*line, temp);
 	}
 	free(temp);
-	if (rd || check)
+	if (rd)
 		return (1);
 	return (0);
 }
@@ -78,11 +83,12 @@ int				get_next_line(const int fd, char **line)
 	return (0);
 }
 
+
 int			main()
 {
 //	int		file1 = open("/Users/mlurker/Desktop/final_libft/test_lib/42FileChecker/srcs/gnl/gnl7_2.txt", O_RDONLY);
-	int		file1 = open("/Users/mlurker/Desktop/gnl_new copy/test", O_RDONLY);
-	int		file2 = open("/Users/mlurker/Desktop/gnl_new copy/test2", O_RDONLY);
+	int		file1 = open("/Users/mlurker/Desktop/gnl_new copy/test2", O_RDONLY);
+	int		file2 = open("/Users/mlurker/Desktop/gnl_new copy/test", O_RDONLY);
 	char	*line;
 	int		i;
 

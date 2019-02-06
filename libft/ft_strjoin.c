@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsmith <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/12 21:12:16 by fsmith            #+#    #+#             */
-/*   Updated: 2019/02/02 22:18:28 by mlurker          ###   ########.fr       */
+/*   Updated: 2019/02/03 21:33:23 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*res;
+	char	*str;
 	int		i;
-	int		j;
 
-	if (s1 && s2)
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
 	{
-		if (!(res = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
+		if ((str = ft_memalloc(ft_strlen(s2) + 1)) == NULL)
 			return (NULL);
-		i = 0;
-		while (s1[i])
-		{
-			res[i] = s1[i];
-			i++;
-		}
-		j = 0;
-		while (s2[j])
-		{
-			res[i + j] = s2[j];
-			j++;
-		}
-		return (res);
+		str = ft_strcpy(str, s2);
+		return (str);
 	}
-	return (NULL);
+	if (!s2)
+		return ((char *)s1);
+	if ((str = ft_memalloc(ft_strlen(s1) + ft_strlen(s2) + 1)) == NULL)
+		return (NULL);
+	i = 0;
+	while (*s1)
+		str[i++] = *s1++;
+	while (*s2)
+		str[i++] = *s2++;
+	str[i] = '\0';
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: pcollio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 15:42:06 by fsmith            #+#    #+#             */
-/*   Updated: 2019/02/03 21:32:24 by pcollio-         ###   ########.fr       */
+/*   Updated: 2019/02/09 16:58:18 by pcollio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char		*ft_strchr(const char *s, int c)
 	if (s)
 	{
 		if (*s == c)
-			return ((char *) s);
+			return ((char *)s);
 		while (*s)
 		{
 			if (*s == c)
-				return ((char *) s);
+				return ((char *)s);
 			s++;
 		}
 	}

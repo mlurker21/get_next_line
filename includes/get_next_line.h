@@ -16,7 +16,7 @@
 # include "../includes/libft.h"
 # include <sys/types.h>
 # include <sys/uio.h>
-# define BUFF_SIZE 50
+# define BUFF_SIZE 5
 
 int						get_next_line(const int fd, char **line);
 

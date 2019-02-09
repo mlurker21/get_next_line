@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/pcollio-/Projects/get_next_line/get_next_line.c
+/Users/mlurker/Desktop/gnl/get_next_line.c
 includes/get_next_line.h
-/Users/pcollio-/Projects/get_next_line/includes/get_next_line.h
+/Users/mlurker/Desktop/gnl/includes/get_next_line.h
 
-/Users/pcollio-/Projects/get_next_line/includes/get_next_line.h
+/Users/mlurker/Desktop/gnl/includes/get_next_line.h
 ../includes/libft.h
-/Users/pcollio-/Projects/get_next_line/includes/libft.h
+/Users/mlurker/Desktop/gnl/includes/libft.h
 sys/types.h
 -
 sys/uio.h
 -
 
-/Users/pcollio-/Projects/get_next_line/includes/libft.h
+/Users/mlurker/Desktop/gnl/includes/libft.h
 unistd.h
 -
 fcntl.h
